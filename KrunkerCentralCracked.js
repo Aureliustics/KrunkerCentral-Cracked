@@ -172,39 +172,39 @@ function cheat() {
           set(_0x8dae73) {
             this._canvas = _0x8dae73;
             if (_0x8dae73.id == "game-overlay") {
-              _0x28c200.overlay = this;
-              _0x28c200.ctx = _0x8dae73.getContext("2d");
+              cheat.overlay = this;
+              cheat.ctx = _0x8dae73.getContext("2d");
               Object.defineProperties(this, {
                 render: {
                   set(_0x123964) {
                     this._render = new Proxy(_0x123964, {
                       apply(_0xa53baa, _0x4ce758, _0x3956e9) {
                         ["scale", "game", "controls", "renderer", "me"].forEach((_0x21ecfe, _0x464537) => {
-                          _0x28c200[_0x21ecfe] = _0x3956e9[_0x464537];
+                          cheat[_0x21ecfe] = _0x3956e9[_0x464537];
                         });
                         Reflect.apply(...arguments);
-                        if (_0x28c200.isDefined(_0x28c200.renderer) && _0x28c200.isDefined(_0x28c200.renderer.adsFovMlt)) {
+                        if (cheat.isDefined(cheat.renderer) && cheat.isDefined(cheat.renderer.adsFovMlt)) {
                           try {
-                            _0x28c200.renderer.adsFovMlt.fill(_0x28c200.settings.weaponZoom);
+                            cheat.renderer.adsFovMlt.fill(cheat.settings.weaponZoom);
                           } catch (_0x3c5029) {
                             console.error(_0x3c5029);
                           }
                         }
-                        if (_0x28c200.me && _0x28c200.ctx) {
-                          _0x28c200.ctx.save();
-                          _0x28c200.ctx.scale(_0x28c200.scale, _0x28c200.scale);
-                          _0x28c200.render();
-                          _0x28c200.ctx.restore();
-                          if (!_0x28c200.me.procInputs[_0x28c200.isProxy]) {
-                            _0x28c200.me.procInputs = new Proxy(_0x28c200.me.procInputs, {
+                        if (cheat.me && cheat.ctx) {
+                          cheat.ctx.save();
+                          cheat.ctx.scale(cheat.scale, cheat.scale);
+                          cheat.render();
+                          cheat.ctx.restore();
+                          if (!cheat.me.procInputs[cheat.isProxy]) {
+                            cheat.me.procInputs = new Proxy(cheat.me.procInputs, {
                               apply(_0x35fc30, _0xe52885, [_0x237848, _0x947d94, _0x2ef56a, _0x3af5ef]) {
                                 if (_0xe52885) {
-                                  _0x28c200.inputs(_0x237848);
+                                  cheat.inputs(_0x237848);
                                 }
                                 return Reflect.apply(...arguments);
                               },
                               get(_0xcabfea, _0x415a25) {
-                                if (_0x415a25 === _0x28c200.isProxy) {
+                                if (_0x415a25 === cheat.isProxy) {
                                   return true;
                                 } else {
                                   return Reflect.get(_0xcabfea, _0x415a25);
@@ -212,10 +212,10 @@ function cheat() {
                               }
                             });
                           }
-                          _0x28c200.game.map.manager.objects.filter(_0x23e5be => {
+                          cheat.game.map.manager.objects.filter(_0x23e5be => {
                             return _0x23e5be.penetrable;
                           }).map((_0x46c730, _0xf35eee, _0x1bea90) => {
-                            _0x46c730.transparent = _0x28c200.settings.wallbangs;
+                            _0x46c730.transparent = cheat.settings.wallbangs;
                           });
                         }
                       }
@@ -234,7 +234,7 @@ function cheat() {
         },
         OBJLoader: {
           set(_0x3b2c14) {
-            _0x28c200.three = this;
+            cheat.three = this;
             this._value = _0x3b2c14;
           },
           get() {
@@ -255,7 +255,7 @@ function cheat() {
             return _0x5ad225;
           },
           get() {
-            if (_0x28c200.settings.skinHack && this.stats) {
+            if (cheat.settings.skinHack && this.stats) {
               return this[_0x596390];
             } else {
               return this[_0x53a59b];
@@ -268,7 +268,7 @@ function cheat() {
             return this._ulc;
           },
           set(_0x4415cb) {
-            _0x28c200.config = this;
+            cheat.config = this;
             Object.defineProperty(this, "nameVisRate", {
               value: 0,
               writable: false,
@@ -280,7 +280,7 @@ function cheat() {
         trail: {
           enumerable: false,
           get() {
-            return _0x28c200.settings.alwaysTrail || this._trail;
+            return cheat.settings.alwaysTrail || this._trail;
           },
           set(_0x5e8ef6) {
             this._trail = _0x5e8ef6;
@@ -289,7 +289,7 @@ function cheat() {
         showTracers: {
           enumerable: false,
           get() {
-            return _0x28c200.settings.alwaysTrail || this._showTracers;
+            return cheat.settings.alwaysTrail || this._showTracers;
           },
           set(_0x10bace) {
             this._showTracers = _0x10bace;
@@ -299,7 +299,7 @@ function cheat() {
           enumerable: false,
           get() {
             if (this.src && this.src.startsWith("pubs/")) {
-              if (_0x28c200.settings.animatedBillboards) {
+              if (cheat.settings.animatedBillboards) {
                 return 1;
               } else {
                 return this.rshaderId;
@@ -315,7 +315,7 @@ function cheat() {
         idleTimer: {
           enumerable: false,
           get() {
-            if (_0x28c200.settings.antikick) {
+            if (cheat.settings.antikick) {
               return 0;
             } else {
               return this._idleTimer;
@@ -328,7 +328,7 @@ function cheat() {
         kickTimer: {
           enumerable: false,
           get() {
-            if (_0x28c200.settings.antikick) {
+            if (cheat.settings.antikick) {
               return Infinity;
             } else {
               return this._kickTimer;
@@ -343,8 +343,8 @@ function cheat() {
             this.inView = _0x50f04c;
           },
           get() {
-            let _0x458a7f = !_0x28c200.isDefined(_0x28c200.me) || !_0x28c200.me.team || _0x28c200.me.team != this.team;
-            return this.inView || _0x458a7f && _0x28c200.state.nameTags;
+            let _0x458a7f = !cheat.isDefined(cheat.me) || !cheat.me.team || cheat.me.team != this.team;
+            return this.inView || _0x458a7f && cheat.state.nameTags;
           }
         },
         canBSeen: {
@@ -352,7 +352,7 @@ function cheat() {
             this.inView2 = _0x4efd10;
           },
           get() {
-            return this.inView2 || _0x28c200.settings.botNametags;
+            return this.inView2 || cheat.settings.botNametags;
           }
         },
         events: {
@@ -361,13 +361,13 @@ function cheat() {
             if (this.ahNum !== 0) {
               return;
             }
-            _0x28c200.wsSend = this.send.bind(this);
-            _0x28c200.wsEvent = this._dispatchEvent.bind(this);
-            _0x28c200.socket = this;
+            cheat.wsSend = this.send.bind(this);
+            cheat.wsEvent = this._dispatchEvent.bind(this);
+            cheat.socket = this;
             this.send = new Proxy(this.send, {
               apply(_0x4972eb, _0x345924, [_0x2faba4, _0x4bb145]) {
                 if (_0x2faba4 === "en") {
-                  _0x28c200.skins = {
+                  cheat.skins = {
                     main: _0x4bb145[2][0],
                     secondary: _0x4bb145[2][1],
                     hat: _0x4bb145[3],
@@ -382,19 +382,19 @@ function cheat() {
             });
             this._dispatchEvent = new Proxy(this._dispatchEvent, {
               apply(_0x45aa67, _0x3c623e, [_0x288bd6, _0x61b5e7]) {
-                if (_0x28c200.settings.skinHack && _0x288bd6 === "0") {
+                if (cheat.settings.skinHack && _0x288bd6 === "0") {
                   let _0x40a4ed = _0x61b5e7[0];
                   let _0x1364d2 = 38;
                   while (_0x40a4ed.length % _0x1364d2 !== 0) {
                     _0x1364d2++;
                   }
                   for (let _0x560496 = 0; _0x560496 < _0x40a4ed.length; _0x560496 += _0x1364d2) {
-                    _0x40a4ed[_0x560496 + 12] = [_0x28c200.skins.main, _0x28c200.skins.secondary];
-                    _0x40a4ed[_0x560496 + 13] = _0x28c200.skins.hat;
-                    _0x40a4ed[_0x560496 + 14] = _0x28c200.skins.body;
-                    _0x40a4ed[_0x560496 + 19] = _0x28c200.skins.knife;
-                    _0x40a4ed[_0x560496 + 24] = _0x28c200.skins.dye;
-                    _0x40a4ed[_0x560496 + 33] = _0x28c200.skins.waist;
+                    _0x40a4ed[_0x560496 + 12] = [cheat.skins.main, cheat.skins.secondary];
+                    _0x40a4ed[_0x560496 + 13] = cheat.skins.hat;
+                    _0x40a4ed[_0x560496 + 14] = cheat.skins.body;
+                    _0x40a4ed[_0x560496 + 19] = cheat.skins.knife;
+                    _0x40a4ed[_0x560496 + 24] = cheat.skins.dye;
+                    _0x40a4ed[_0x560496 + 33] = cheat.skins.waist;
                   }
                 }
                 return Reflect.apply(...arguments);
@@ -410,7 +410,7 @@ function cheat() {
             this._thirdPerson = _0x3958ac;
           },
           get() {
-            return this._thirdPerson || _0x28c200.settings.thirdPerson;
+            return this._thirdPerson || cheat.settings.thirdPerson;
           }
         }
       });
@@ -449,16 +449,16 @@ function cheat() {
         });
       });
       window.addEventListener("mouseup", _0x70edd9 => {
-        if (_0x70edd9.which === 2 && _0x28c200.settings.guiOnMMB) {
+        if (_0x70edd9.which === 2 && cheat.settings.guiOnMMB) {
           _0x70edd9.preventDefault();
-          _0x28c200.showGUI();
+          cheat.showGUI();
         }
       });
       window.addEventListener("keyup", _0x2ccb94 => {
         if (this.state.pressedKeys.has(_0x2ccb94.code)) {
           this.state.pressedKeys.delete(_0x2ccb94.code);
         }
-        if (document.activeElement.tagName !== "INPUT" && (!!window.endUI || !window.endUI.style.display) && _0x28c200.settings.keybinds) {
+        if (document.activeElement.tagName !== "INPUT" && (!!window.endUI || !window.endUI.style.display) && cheat.settings.keybinds) {
           switch (_0x2ccb94.code) {
             case "KeyY":
               this.state.bindAimbotOn = !this.state.bindAimbotOn;
@@ -474,7 +474,7 @@ function cheat() {
       window.addEventListener("keydown", _0x531d2f => {
         if (_0x531d2f.code == "F1") {
           _0x531d2f.preventDefault();
-          _0x28c200.showGUI();
+          cheat.showGUI();
         }
         if (document.activeElement.tagName == "INPUT" || !window.endUI && window.endUI.style.display) {
           return;
@@ -575,7 +575,7 @@ function cheat() {
           try {
             Object.defineProperty(this.game.config, "nameTags", {
               get() {
-                if (_0x28c200.settings.forceNametagsOn) {
+                if (cheat.settings.forceNametagsOn) {
                   return false;
                 } else {
                   return this.game._nametags;
@@ -925,7 +925,7 @@ function cheat() {
           continue;
         }
         if (this.settings.tracers) {
-          _0x24d2c1(_0x221285 / 2, _0x28c200.settings.tracers === 2 ? _0x2fa5df / 2 : _0x2fa5df - 1, _0x1d1c30.x, _0x1d1c30.y, 2, _0xca1270.team === null ? "#FF4444" : _0xca1270.team === this.me.team ? "#44AAFF" : "#FF4444");
+          _0x24d2c1(_0x221285 / 2, cheat.settings.tracers === 2 ? _0x2fa5df / 2 : _0x2fa5df - 1, _0x1d1c30.x, _0x1d1c30.y, 2, _0xca1270.team === null ? "#FF4444" : _0xca1270.team === this.me.team ? "#44AAFF" : "#FF4444");
         }
         const _0x348772 = _0xca1270.objInstances;
         if (this.isDefined(_0x348772)) {
@@ -936,10 +936,10 @@ function cheat() {
             });
           } else {
             let _0x413581 = this.settings.chams;
-            if (_0x28c200.gaybow >= 360) {
-              _0x28c200.gaybow = 0;
+            if (cheat.gaybow >= 360) {
+              cheat.gaybow = 0;
             } else {
-              _0x28c200.gaybow++;
+              cheat.gaybow++;
             }
             _0x348772.traverse(_0x17a5f5 => {
               if (_0x17a5f5 && _0x17a5f5.type == "Mesh" && this.isDefined(_0x17a5f5.material)) {
@@ -948,15 +948,15 @@ function cheat() {
                 } else if (_0x17a5f5.hasOwnProperty(this.hash)) {
                   Object.defineProperty(_0x17a5f5, "material", {
                     get() {
-                      if (!_0x413581 || !_0x671a85 && !_0x28c200.settings.teamChams) {
-                        return this[_0x28c200.hash];
+                      if (!_0x413581 || !_0x671a85 && !cheat.settings.teamChams) {
+                        return this[cheat.hash];
                       } else {
-                        return new _0x28c200.three.MeshBasicMaterial({
-                          color: new _0x28c200.three.Color(_0x28c200.settings.chamsCol == 12 ? "hsl(" + _0x28c200.gaybow + ",100%, 50%)" : Object.values(_0x28c200.colors)[_0x28c200.settings.chamsCol]),
+                        return new cheat.three.MeshBasicMaterial({
+                          color: new cheat.three.Color(cheat.settings.chamsCol == 12 ? "hsl(" + cheat.gaybow + ",100%, 50%)" : Object.values(cheat.colors)[cheat.settings.chamsCol]),
                           depthTest: false,
                           transparent: true,
                           fog: false,
-                          wireframe: _0x28c200.settings.wireframe
+                          wireframe: cheat.settings.wireframe
                         });
                       }
                     }
@@ -1070,28 +1070,28 @@ function cheat() {
         _0x52d8ce.append(_0x23277d);
         _0x23277d.addEventListener("click", _0x2ba02a);
       }
-      _0x28c200.GUI.setSetting = function (_0x3b868c, _0xd43dee) {
+      cheat.GUI.setSetting = function (_0x3b868c, _0xd43dee) {
         switch (_0x3b868c) {
           case "customCSS":
-            _0x28c200.settings.customCSS = _0xd43dee;
-            _0x28c200.customCSS();
+            cheat.settings.customCSS = _0xd43dee;
+            cheat.customCSS();
             break;
           default:
             console.log("SET ", _0x3b868c, " ", _0xd43dee);
-            _0x28c200.settings[_0x3b868c] = _0xd43dee;
+            cheat.settings[_0x3b868c] = _0xd43dee;
         }
-        _0x28c200.saveSettings();
+        cheat.saveSettings();
       };
-      _0x28c200.GUI.settings = {
+      cheat.GUI.settings = {
         aimbot: {
           val: this.settings.aimbot
         }
       };
-      _0x28c200.GUI.windowObj = {
+      cheat.GUI.windowObj = {
         header: "CH33T",
         html: "",
         gen() {
-          return _0x28c200.getGuiHtml();
+          return cheat.getGuiHtml();
         }
       };
       window.windows = {
@@ -1099,9 +1099,9 @@ function cheat() {
         length: window.windows.length
       };
       Object.setPrototypeOf(window.windows, Array.prototype);
-      _0x28c200.GUI.windowIndex = window.windows.length + 1;
+      cheat.GUI.windowIndex = window.windows.length + 1;
       Object.defineProperty(window.windows, window.windows.length, {
-        value: _0x28c200.GUI.windowObj
+        value: cheat.GUI.windowObj
       });
       if (this.settings.showGuiButton) {
         _0x83f54e("CH33TS", null, () => {
@@ -1112,7 +1112,7 @@ function cheat() {
             console.log("ad prevented");
           }
             */
-          window.showWindow(_0x28c200.GUI.windowIndex);
+          window.showWindow(cheat.GUI.windowIndex);
         });
       }
     }
@@ -1124,19 +1124,19 @@ function cheat() {
     }
     getGuiHtml() {
       const _0x708530 = {
-        checkbox: (_0x5e93f3, _0x16da13, _0x31759a = "", _0x5c09d6 = false) => "<div class=\"settName\" title=\"" + _0x31759a + "\">" + _0x5e93f3 + " " + (_0x5c09d6 ? "<span style=\"color: #eb5656\">*</span>" : "") + "<label class=\"switch\" style=\"margin-left:10px\"><input type=\"checkbox\" onclick='" + this.hash + ".GUI.setSetting(\"" + _0x16da13 + "\", this.checked)' " + (_0x28c200.settings[_0x16da13] ? "checked" : "") + "><span class=\"slider\"></span></label></div>",
-        client_setting: (_0x228d1c, _0x4f2371, _0x65115c = "", _0x24465f = true) => "<div class=\"settName\" title=\"" + _0x65115c + "\">" + _0x228d1c + " " + (_0x24465f ? "<span style=\"color: #eb5656\">*</span>" : "") + "<label class=\"switch\" style=\"margin-left:10px\"><input type=\"checkbox\" onclick='doge_setsetting(\"" + _0x4f2371 + "\", this.checked?\"1\":\"0\")' " + (_0x28c200.settings[_0x4f2371] ? "checked" : "") + "><span class=\"slider\"></span></label></div>",
+        checkbox: (_0x5e93f3, _0x16da13, _0x31759a = "", _0x5c09d6 = false) => "<div class=\"settName\" title=\"" + _0x31759a + "\">" + _0x5e93f3 + " " + (_0x5c09d6 ? "<span style=\"color: #eb5656\">*</span>" : "") + "<label class=\"switch\" style=\"margin-left:10px\"><input type=\"checkbox\" onclick='" + this.hash + ".GUI.setSetting(\"" + _0x16da13 + "\", this.checked)' " + (cheat.settings[_0x16da13] ? "checked" : "") + "><span class=\"slider\"></span></label></div>",
+        client_setting: (_0x228d1c, _0x4f2371, _0x65115c = "", _0x24465f = true) => "<div class=\"settName\" title=\"" + _0x65115c + "\">" + _0x228d1c + " " + (_0x24465f ? "<span style=\"color: #eb5656\">*</span>" : "") + "<label class=\"switch\" style=\"margin-left:10px\"><input type=\"checkbox\" onclick='doge_setsetting(\"" + _0x4f2371 + "\", this.checked?\"1\":\"0\")' " + (cheat.settings[_0x4f2371] ? "checked" : "") + "><span class=\"slider\"></span></label></div>",
         select: (_0x5a4ccb, _0x9c0c72, _0x4d0608, _0x45b85b = "", _0x4c9259 = false) => {
           let _0x5178de = "<div class=\"settName\" title=\"" + _0x45b85b + "\">" + _0x5a4ccb + " " + (_0x4c9259 ? "<span style=\"color: #eb5656\">*</span>" : "") + "<select onchange='" + this.hash + ".GUI.setSetting(\"" + _0x9c0c72 + "\", parseInt(this.value))' class=\"inputGrey2\">";
           for (const _0x4d7dde in _0x4d0608) {
             if (_0x4d0608.hasOwnProperty(_0x4d7dde)) {
-              _0x5178de += "<option value=\"" + _0x4d0608[_0x4d7dde] + "\" " + (_0x28c200.settings[_0x9c0c72] == _0x4d0608[_0x4d7dde] ? "selected" : "") + ">" + _0x4d7dde + "</option>,";
+              _0x5178de += "<option value=\"" + _0x4d0608[_0x4d7dde] + "\" " + (cheat.settings[_0x9c0c72] == _0x4d0608[_0x4d7dde] ? "selected" : "") + ">" + _0x4d7dde + "</option>,";
             }
           }
           return _0x5178de + "</select></div>";
         },
-        slider: (_0x38bdb5, _0x3d86ac, _0x9bd3f5, _0x1726c5, _0x17a508, _0x5b1660 = "") => "<div class=\"settName\" title=\"" + _0x5b1660 + "\">" + _0x38bdb5 + " <input type=\"number\" class=\"sliderVal\" id=\"slid_input_" + _0x3d86ac + "\" min=\"" + _0x9bd3f5 + "\" max=\"" + _0x1726c5 + "\" value=\"" + _0x28c200.settings[_0x3d86ac] + "\" onkeypress=\"" + this.hash + ".GUI.setSetting('" + _0x3d86ac + "', parseFloat(this.value.replace(',', '.')));document.querySelector('#slid_input_" + _0x3d86ac + "').value=this.value\" style=\"margin-right:0;border-width:0\"><div class=\"slidecontainer\" style=\"\"><input type=\"range\" id=\"slid_" + _0x3d86ac + "\" min=\"" + _0x9bd3f5 + "\" max=\"" + _0x1726c5 + "\" step=\"" + _0x17a508 + "\" value=\"" + _0x28c200.settings[_0x3d86ac] + "\" class=\"sliderM\" oninput=\"" + this.hash + ".GUI.setSetting('" + _0x3d86ac + "', parseFloat(this.value));document.querySelector('#slid_input_" + _0x3d86ac + "').value=this.value\"></div></div>",
-        input: (_0x5559a2, _0x2ca8ad, _0x3a5369, _0x314ebd, _0x31bfae) => "<div class=\"settName\" title=\"" + _0x314ebd + "\">" + _0x5559a2 + " <input type=\"" + _0x3a5369 + "\" name=\"" + _0x3a5369 + "\" id=\"slid_utilities_" + _0x2ca8ad + "\"\n" + (_0x3a5369 == "color" ? "style=\"float:right;margin-top:5px\"" : "class=\"inputGrey2\" placeholder=\"" + _0x31bfae + "\"") + "\nvalue=\"" + _0x28c200.settings[_0x2ca8ad] + "\" oninput=\"" + this.hash + ".GUI.setSetting('" + _0x2ca8ad + "', this.value)\"/></div>",
+        slider: (_0x38bdb5, _0x3d86ac, _0x9bd3f5, _0x1726c5, _0x17a508, _0x5b1660 = "") => "<div class=\"settName\" title=\"" + _0x5b1660 + "\">" + _0x38bdb5 + " <input type=\"number\" class=\"sliderVal\" id=\"slid_input_" + _0x3d86ac + "\" min=\"" + _0x9bd3f5 + "\" max=\"" + _0x1726c5 + "\" value=\"" + cheat.settings[_0x3d86ac] + "\" onkeypress=\"" + this.hash + ".GUI.setSetting('" + _0x3d86ac + "', parseFloat(this.value.replace(',', '.')));document.querySelector('#slid_input_" + _0x3d86ac + "').value=this.value\" style=\"margin-right:0;border-width:0\"><div class=\"slidecontainer\" style=\"\"><input type=\"range\" id=\"slid_" + _0x3d86ac + "\" min=\"" + _0x9bd3f5 + "\" max=\"" + _0x1726c5 + "\" step=\"" + _0x17a508 + "\" value=\"" + cheat.settings[_0x3d86ac] + "\" class=\"sliderM\" oninput=\"" + this.hash + ".GUI.setSetting('" + _0x3d86ac + "', parseFloat(this.value));document.querySelector('#slid_input_" + _0x3d86ac + "').value=this.value\"></div></div>",
+        input: (_0x5559a2, _0x2ca8ad, _0x3a5369, _0x314ebd, _0x31bfae) => "<div class=\"settName\" title=\"" + _0x314ebd + "\">" + _0x5559a2 + " <input type=\"" + _0x3a5369 + "\" name=\"" + _0x3a5369 + "\" id=\"slid_utilities_" + _0x2ca8ad + "\"\n" + (_0x3a5369 == "color" ? "style=\"float:right;margin-top:5px\"" : "class=\"inputGrey2\" placeholder=\"" + _0x31bfae + "\"") + "\nvalue=\"" + cheat.settings[_0x2ca8ad] + "\" oninput=\"" + this.hash + ".GUI.setSetting('" + _0x2ca8ad + "', this.value)\"/></div>",
         label: (_0x4e3f8b, _0x17250e) => "<br><span style='color: black; font-size: 20px; margin: 20px 0'>" + _0x4e3f8b + "</span> <span style='color: dimgrey; font-size: 15px'>" + (_0x17250e || "") + "</span><br>",
         nobrlabel: (_0x48fc82, _0x440de4) => "<span style='color: black; font-size: 20px; margin: 20px 0'>" + _0x48fc82 + "</span> <span style='color: dimgrey; font-size: 15px'>" + (_0x440de4 || "") + "</span><br>",
         br: () => "<br>",
@@ -1151,28 +1151,28 @@ function cheat() {
         };
       });
       const _0x209d1a = ["Weapon", "Wallhack", "Visual", "Tweaks", "Movement", "Other"];
-      if (_0x28c200.isClient) {
+      if (cheat.isClient) {
         _0x209d1a.push("Client");
       }
       _0x708530.style(".cheatTabButton { color: black; background: #ddd; padding: 2px 7px; font-size: 15px; cursor: pointer; text-align: center; } .cheatTabActive { background: #bbb;}");
       this.GUI.changeTab = function (_0x405a09) {
         const _0x145bd1 = _0x405a09.innerText;
-        document.getElementById("cheat-tabbtn-" + _0x209d1a[_0x28c200.state.activeTab]).classList.remove("cheatTabActive");
-        document.getElementById("cheat-tab-" + _0x209d1a[_0x28c200.state.activeTab]).style.display = "none";
+        document.getElementById("cheat-tabbtn-" + _0x209d1a[cheat.state.activeTab]).classList.remove("cheatTabActive");
+        document.getElementById("cheat-tab-" + _0x209d1a[cheat.state.activeTab]).style.display = "none";
         _0x405a09.classList.add("cheatTabActive");
         document.getElementById("cheat-tab-" + _0x145bd1).style.display = "block";
-        _0x28c200.state.activeTab = _0x209d1a.indexOf(_0x145bd1);
+        cheat.state.activeTab = _0x209d1a.indexOf(_0x145bd1);
       };
       _0x4cd06d += "<table style=\"width: 100%; margin-bottom: 30px\"><tr>";
       for (let _0x1ccd0d = 0; _0x1ccd0d < _0x209d1a.length; _0x1ccd0d++) {
         const _0x4e6834 = _0x209d1a[_0x1ccd0d];
-        _0x4cd06d += "<td id=\"cheat-tabbtn-" + _0x4e6834 + "\" onclick=\"" + this.hash + ".GUI.changeTab(this)\" class=\"cheatTabButton " + (_0x209d1a[_0x28c200.state.activeTab] === _0x4e6834 ? "cheatTabActive" : "") + "\">";
+        _0x4cd06d += "<td id=\"cheat-tabbtn-" + _0x4e6834 + "\" onclick=\"" + this.hash + ".GUI.changeTab(this)\" class=\"cheatTabButton " + (_0x209d1a[cheat.state.activeTab] === _0x4e6834 ? "cheatTabActive" : "") + "\">";
         _0x4cd06d += _0x4e6834;
         _0x4cd06d += "</td>";
       }
       _0x4cd06d += "</table></tr>";
       function _0x272abc(_0x5d7069, _0x3c53ff) {
-        _0x4cd06d += "<div style=\"display: " + (_0x28c200.state.activeTab === _0x5d7069 ? "block" : "none") + "\" class=\"cheat-tab\" id=\"cheat-tab-" + _0x209d1a[_0x5d7069] + "\">";
+        _0x4cd06d += "<div style=\"display: " + (cheat.state.activeTab === _0x5d7069 ? "block" : "none") + "\" class=\"cheat-tab\" id=\"cheat-tab-" + _0x209d1a[_0x5d7069] + "\">";
         _0x3c53ff();
         _0x4cd06d += "</div>";
       }
@@ -1299,7 +1299,7 @@ function cheat() {
         _0x708530.checkbox("Force nametags on", "fgno", "Use in custom games with disabled nametags");
         _0x708530.input("Custom CSS", "customCSS", "url", "", "URL to CSS file");
       });
-      if (_0x28c200.isClient) {
+      if (cheat.isClient) {
         _0x272abc(6, () => {
           _0x708530.nobrlabel("Restart is required after changing any of these settings");
           _0x708530.br();
@@ -1432,7 +1432,7 @@ function cheat() {
     }
   }
   ;
-  const _0x28c200 = new _0x21b685();
+  const cheat = new _0x21b685();
   for (let _0x5ebef5 = 0; _0x5ebef5 < 5; _0x5ebef5++) {
     console.log(_0x5ebef5 % 2 ? "" : " ");
   }
@@ -1440,7 +1440,7 @@ function cheat() {
   for (let _0x4641ba = 0; _0x4641ba < 5; _0x4641ba++) {
     console.log(_0x4641ba % 2 ? "" : " ");
   }
-  window.doge = _0x28c200;
+  window.doge = cheat;
 }
 let tokenPromiseResolve;
 const tokenPromise = new Promise(_0xb8cce6 => tokenPromiseResolve = _0xb8cce6);

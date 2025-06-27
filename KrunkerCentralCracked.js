@@ -1,11 +1,11 @@
 // ==UserScript==
-// @name        Krunker Central Cracked By Aureliustics
+// @name        Krunker Central Crack (6/26/2025)
 // @namespace   Krunker Central Scripts
 // @match       *://krunker.io/*
 // @grant       none
 // @version     1.1
 // @author      Krunker Central
-// @description A Krunker hack by Krunker Central - https://krunkercentral.com/
+// @description Cracked by Aureliustics
 // @run-at      document-start
 // @noframes
 // ==/UserScript==

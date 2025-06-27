@@ -4,7 +4,7 @@
 // @match       *://krunker.io/*
 // @grant       none
 // @version     1.1
-// @author      Krunker Central
+// @author      Aureliustics
 // @description Cracked by Aureliustics
 // @run-at      document-start
 // @noframes

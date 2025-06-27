@@ -11,5 +11,5 @@
 </ul>
 
 <h1>Disclaimer</h1>
-<b>I am not responsible if you get caught using the cheat aswell as any damages that may occur during usage. If new versions of Krunker Central come out, I may come back and update the crack.</b>
+<li>I am not responsible if you get caught using the cheat aswell as any damages that may occur during usage. If new versions of Krunker Central come out, I may come back and update the crack.</li>
 <li>This is for education purposes and I do not encourage any form of illegal activity or cheating. If you want to analyze the untouched decompilation yourself, you can view it in <a href="https://github.com/Aureliustics/KrunkerCentral-Cracked/blob/main/Decompiled.js" target="_blank">Decompiled.js</a></li>

@@ -7,7 +7,7 @@
   <li>Install Tampermonkey <a href="https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en" target="_blank">here</a></li>
   <li>Click on the Tampermonkey extensions icon once installed and press "Dashboard"</li>
   <li>Click the + icon to the left of "Installed Userscripts"</li>
-  <li>Paste the code from <a href="https://github.com/Aureliustics/KrunkerCentral-Cracked/blob/main/KrunkerCentralCracked.js" target="_blank">here</a> into Tampermonkey and save (Control + S)</li>
+  <li>Paste the code from <a href="https://github.com/Aureliustics/KrunkerCentral-Cracked/blob/main/KrunkerCentralCracked.js" target="_blank">KrunkerCentralCracked.js</a> into Tampermonkey and save (Control + S)</li>
 </ul>
 
 <h1>Usage</h1>

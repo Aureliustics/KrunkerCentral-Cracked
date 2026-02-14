@@ -1471,6 +1471,7 @@ window.fetch = async function (_0x13021f, _0x457d0c) {
   }
   return _fetch.apply(this, arguments);
 };
+/*
 function downloadFileSync(_0xa21ded) {
   var _0x3e2c96 = new XMLHttpRequest();
   _0x3e2c96.open("GET", _0xa21ded, false);
@@ -1479,6 +1480,7 @@ function downloadFileSync(_0xa21ded) {
     return _0x3e2c96.response;
   }
 }
+
 const observer = new MutationObserver(function (_0x11b240) {
   _0x11b240.forEach(function (_0x4d2d18) {
     if (_0x4d2d18.addedNodes) {
@@ -1497,6 +1499,7 @@ const observer = new MutationObserver(function (_0x11b240) {
     }
   });
 });
+*/
 observer.observe(document, {
   childList: true,
   subtree: true

@@ -1,3 +1,8 @@
+<h1>Note: Krunker Central seems to be fully patched</h1>
+<ul>
+  <li>If you still want to cheat, try using this script as a substitute: <a href="https://github.com/Aureliustics/KrunkerCentral-Cracked/blob/main/Quirify's%20Tools%20Rebirth/authRemoved.js" target="_blank">Quirify's Tools Rebirth (Cracked)</a></li>
+</ul>
+
 <h1>Krunker Central Cracked</h1>
 <h3>Removed the authentication, version check and ads from Krunker Central</h3>
 
